@@ -1,5 +1,6 @@
 {
   "tasks": {
-    "start": "deno run --allow-read main.ts"
+    "start": "rm example1.wasm ; wat2wasm example1.wat -o example1.wasm ; deno run --allow-read main.ts",
+    "serve": "rm example1.wasm ; wat2wasm example1.wat -o example1.wasm ; tsc main.ts --target esnext ; emrun ."
   }
 }

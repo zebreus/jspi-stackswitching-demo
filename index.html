@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    
+    <button id="startButton">Start WASM</button>
+    <script type="module">
+        const startButton = document.getElementById('startButton');
+        startButton?.addEventListener('click', async () => {
+            const Module = await import('./main.js')
+            await Module.main();
+        });
+
+    </script>
+</body>
+</html>
