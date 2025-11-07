@@ -1,13 +1,26 @@
-# Deno + WebAssembly Hello World
+# Tiny demo for using the WASM JavaScript Promise Integration API for stackswitching in wasm
 
-Simple Deno project that calls a WebAssembly function to print "Hello, World!".
+Tiny demo for using the WASM JavaScript Promise Integration API for stackswitching in wasm.
 
 ## Files
 
-- `hello.wat` - WebAssembly Text module
 - `main.ts` - Deno script that loads and calls the WASM module
+- `example1.wat` - WebAssembly Text module using an imaginary stackswitching API
+- `example2.py` - Python script that does the same as `example1.wat`
 
-## Setup
+## Usage
 
-1. Compile WAT to WASM: `wat2wasm hello.wat -o hello.wasm`
+### Deno
+
+1. Install wabt and deno
 2. Run: `deno task start`
+
+### Browser
+
+1. Install deno and emscripten (for emrun)
+2. Run `deno task serve`
+
+### Greenlet
+
+1. Install python and greenlet
+2. Run `python example1.py`
