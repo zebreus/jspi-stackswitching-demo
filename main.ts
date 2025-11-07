@@ -47,8 +47,8 @@ export async function main() {
         if (from_continuation.resume) {
           throw new Error("The current greenlet is already paused");
         }
-        const promise = new Promise<void>((resume) => {
-          from_continuation.resume = resume as () => void;
+        const promise = new Promise<void>((resolve) => {
+          from_continuation.resume = resolve as () => void;
         });
 
         // Resume the promise on the continuation we are switching to
