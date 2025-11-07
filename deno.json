@@ -1,0 +1,23 @@
+{
+  "name": "deno-wasm-hello-world",
+  "version": "1.0.0",
+  "exports": "./main.ts",
+  "tasks": {
+    "start": "deno run --allow-read main.ts",
+    "demo": "deno run --allow-read wasm-demo.ts",
+    "loader": "deno run --allow-read wasm-loader.ts",
+    "complete": "deno run --allow-read complete-demo.ts",
+    "compile-wat": "wat2wasm hello.wat -o hello.wasm",
+    "dev": "deno run --allow-read --watch main.ts"
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 100,
+    "indentWidth": 2
+  },
+  "lint": {
+    "rules": {
+      "tags": ["recommended"]
+    }
+  }
+}
